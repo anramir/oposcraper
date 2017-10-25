@@ -26,6 +26,14 @@ class Opositor:
             self.parametros['baremo']=self.checkBaremo(self.parametros['nif'])
         print self.parametros
 
+    def setNotasPrueba1(self, prueba1, ppractica, tema, ntribunal, provincia):
+        self.parametros['prueba1']=self.checker(prueba1)
+        self.parametros['ppractica']=self.checker(ppractica)
+        self.parametros['tema']=self.checker(tema)
+        self.parametros['tribunal']={}
+        self.parametros['tribunal']['ntribunal']=ntribunal
+        self.parametros['tribunal']['provincia']=provincia
+
     def checker(self,parametro):
         if '---no---' in parametro:
             resultado=-1
