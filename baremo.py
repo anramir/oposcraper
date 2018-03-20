@@ -9,7 +9,7 @@ for link in links:
         enlace=link
 br.follow_link(enlace)
 br.select_form("NDNI")
-br.form['DNI']='77345813X'
+br.form['DNI']=''
 page=br.submit()
 html=page.read()
 soup=BeautifulSoup(html)
